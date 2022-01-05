@@ -7,7 +7,8 @@ def main():
     output_path=sys.argv[2]
 
     title = 'HTML file'
-    if (len(sys.argv) < 4): title = sys.argv[3]
+    print(len(sys.argv))
+    if (len(sys.argv) > 3): title = sys.argv[3]
 
     HTML_HEAD = f'''
 

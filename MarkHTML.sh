@@ -19,7 +19,7 @@ MarkHTML() {
 		fi
 
 		echo "Saída: $output_path"
-		exec python script.py $1 $output_path
+		exec python3 script.py $1 $output_path
 		
 
 	else

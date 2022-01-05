@@ -19,7 +19,7 @@ MarkHTML() {
 		fi
 
 		echo "Saída: $output_path"
-		exec python3 script.py $1 $output_path
+		exec python3 script.py $1 $output_path $3
 		
 
 	else
@@ -28,4 +28,4 @@ MarkHTML() {
 	
 }
 
-MarkHTML $1 $2
+MarkHTML $1 $2 $3

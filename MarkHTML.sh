@@ -20,6 +20,7 @@ MarkHTML() {
 
 		echo "Saída: $output_path"
 		exec python3 script.py $1 $output_path $3
+		cp "./style.css" $output_path
 		
 
 	else

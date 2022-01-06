@@ -48,8 +48,6 @@ def main():
     
     output_file.write(html_final_string)
 
-    cp css_path output_path
-
 
 if __name__ == '__main__':
     main()

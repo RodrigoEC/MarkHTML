@@ -3,6 +3,7 @@
 # $1 - file_path: Where the markdown file is (required)
 # $2 - output_path: Where the html file is going to be saved (not-required)
 # $3 - html_title: The title of the html file that's going to be created (not-required)
+# $4 - css_path: The path to a CSS file that's going to add style to the html file created
 
 
 findExtension() {
@@ -43,4 +44,4 @@ MarkHTML() {
 	
 }
 
-MarkHTML $1 $2 $3 $4 $5
+MarkHTML $1 $2 $3 $4

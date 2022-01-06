@@ -3,11 +3,13 @@
 MarkHTML() {
 	if [ -e $1 ]
 	then
-		if [ -z $2 ]
 		local base_path=$(echo $1 | awk -F/ '{
 			for (x=2; x<=NF-1; x++) {
 						printf("/%s", $x)
-			}')
+						
+			}}')
+		echo $base_path
+		if [ -z $2 ]
 		then
 			local output_path="$base_path/output.html"
 

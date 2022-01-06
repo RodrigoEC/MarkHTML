@@ -16,7 +16,7 @@ def main():
 
     <head>
         <meta charset="utf-8">
-        <title>{title}</title>
+        <title>{ title}</title>
         <link rel="stylesheet" type="text/css" href={css_path}>
     </head>
 
@@ -48,6 +48,7 @@ def main():
     
     output_file.write(html_final_string)
 
+    cp css_path output_path
 
 
 if __name__ == '__main__':

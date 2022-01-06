@@ -9,7 +9,8 @@ MarkHTML() {
 						printf("/%s", $x)
 			}')
 		then
-			local output_path="$base_path/index.html"
+			local output_path="$base_path/output.html"
+
 		else
 			local output_path=$2
 		fi

@@ -6,10 +6,6 @@
 # $4 - css_path: The path to a CSS file that's going to add style to the html file created
 
 
-findExtension() {
-	return $extension
-}
-
 MarkHTML() {
 	if [[ -e $1 && ! -d $1 ]]
 	then

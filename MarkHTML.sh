@@ -4,23 +4,19 @@ MarkHTML() {
 	if [ -e $1 ]
 	then
 		if [ -z $2 ]
-		then
-			local output_path=$(echo $1 | awk -F/ '{
-			for (x=1; x<=NF-1; x++) {
-					if (x == NF-1) {
-						printf("%s/output.html", $x)
-					} else {
-						printf("%s/", $x)
-					}
-				}
+		local base_path=$(echo $1 | awk -F/ '{
+			for (x=2; x<=NF-1; x++) {
+						printf("/%s", $x)
 			}')
+		then
+			local output_path="$base_path/index.html"
 		else
 			local output_path=$2
 		fi
 
 		echo "Saída: $output_path"
 		exec python3 script.py $1 $output_path $3
-		cp "./style.css" $output_path
+		cp -R "./style.css" $base_path
 		
 
 	else
